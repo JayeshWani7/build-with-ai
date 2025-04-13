@@ -1,6 +1,6 @@
 """Tools for interacting with Gmail API."""
 
-from typing import List, Dict, Optional, Any, Annotated
+from typing import List, Dict, Any, Annotated
 from datetime import datetime, timedelta
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
