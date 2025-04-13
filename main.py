@@ -16,10 +16,10 @@ def check_recent_emails():
     """
     try:
         # Get emails from last 10 minutes
-        recent_emails = list_recent_emails(minutes=15)
+        recent_emails = list_recent_emails(minutes=10)
 
         if not recent_emails:
-            logger.info("no_new_emails", minutes=15)
+            logger.info("no_new_emails", minutes=10)
             return
 
         logger.info("found_new_emails", count=len(recent_emails))
@@ -49,7 +49,7 @@ def check_recent_emails():
 
 def main():
     # Schedule the email checking function to run every 10 minutes
-    schedule.every(2).minutes.do(check_recent_emails)
+    schedule.every(10).minutes.do(check_recent_emails)
 
     logger.info("assistant_started", check_interval_minutes=1)
 
