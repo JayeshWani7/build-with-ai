@@ -26,14 +26,22 @@ def check_recent_emails():
 
         # Process each email
         for email in recent_emails:
-            logger.info("processing_email", 
-                       sender=email.get('sender'), 
-                       subject=email.get('subject'))
-            result = email_assistant_with_scheduling.invoke(
-                {"messages": [{"role": "user", "content": f"Email Content: {email}"}]}
+            logger.info(
+                "processing_email",
+                sender=email.get("sender"),
+                subject=email.get("subject"),
             )
-            for message in result["messages"]:
-                logger.info("assistant_response", response=message.content)
+            for update in email_assistant_with_scheduling.stream(
+                {"messages": [{"role": "user", "content": f"Email Content: {email}"}]},
+                stream_mode="updates",
+            ):
+                # update will be a dict with node name as key and its output as value
+                for node_name, node_output in update.items():
+                    logger.info(
+                        "ai_step",
+                        node=node_name,
+                        output=node_output["messages"][-1].content,
+                    )
 
     except Exception as e:
         logger.exception("email_check_error", error=str(e))
@@ -41,7 +49,7 @@ def check_recent_emails():
 
 def main():
     # Schedule the email checking function to run every 10 minutes
-    schedule.every(1).minutes.do(check_recent_emails)
+    schedule.every(2).minutes.do(check_recent_emails)
 
     logger.info("assistant_started", check_interval_minutes=1)
 
