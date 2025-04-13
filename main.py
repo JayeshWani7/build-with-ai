@@ -51,7 +51,7 @@ def main():
     # Schedule the email checking function to run every 10 minutes
     schedule.every(10).minutes.do(check_recent_emails)
 
-    logger.info("assistant_started", check_interval_minutes=1)
+    logger.info("assistant_started", check_interval_minutes=10)
 
     # Run the first check immediately
     check_recent_emails()
