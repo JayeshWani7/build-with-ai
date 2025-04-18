@@ -143,6 +143,26 @@ Ensure proper setup of:
 2. Gmail API access
 3. Google Calendar API access
 
+## Examples
+
+Here are some examples of the Email Assistant in action:
+
+### Inbox Email 1
+
+![Inbox Email Example 1](examples/inbox-mail-1.jpeg)
+
+### Response Draft 1
+
+![Response Draft Example 1](examples/response-draft-1.jpeg)
+
+### Inbox Email 2
+
+![Inbox Email Example 2](examples/inbox-mail-2.jpeg)
+
+### Response Draft 2
+
+![Response Draft Example 2](examples/response-draft-2.jpeg)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
