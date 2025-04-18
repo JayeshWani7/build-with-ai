@@ -48,6 +48,7 @@ A smart email and calendar management system powered by Gemini Pro that automati
 1. Go to [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 
 2. Click on create API Key
+
    <img width="1739" alt="image" src="https://github.com/user-attachments/assets/a4a194e7-65c8-4593-8a68-5e0bf8dd6b66" />
 
 3. Select the project from the dropdown
@@ -73,41 +74,53 @@ A smart email and calendar management system powered by Gemini Pro that automati
 ## Setting up OAuth 2.0 Credentials
 
 1. Go to [https://console.cloud.google.com/auth/overview](https://console.cloud.google.com/auth/overview). Click on `Get Started`
+
    <img width="1792" alt="Screenshot 2025-04-13 at 5 10 25 PM" src="https://github.com/user-attachments/assets/0e513e06-31b9-4e1c-8025-858e0b6a2dac" />
 
 2. Under App Information, give any name to your app and select your email id from the drop down under user support email and click next
+
    <img width="628" alt="Screenshot 2025-04-13 at 5 11 08 PM" src="https://github.com/user-attachments/assets/36698341-178a-450e-b4cd-ace43b42aedc" />
 
 3. Under Audience, select external and click next
+
    <img width="728" alt="Screenshot 2025-04-13 at 5 11 20 PM" src="https://github.com/user-attachments/assets/5f41c84e-3118-4cd4-a2e2-02a71ae9557e" />
 
 4. Put any email id under contact information and click next
+
    <img width="694" alt="Screenshot 2025-04-13 at 5 11 28 PM" src="https://github.com/user-attachments/assets/d97c60e5-90b7-4e46-90a6-90fa7ade189d" />
 
 5. Accept the terms and conditions and click continue
+
    <img width="561" alt="Screenshot 2025-04-13 at 5 11 43 PM" src="https://github.com/user-attachments/assets/1bb1f725-38ec-472f-9c6c-be208e8dfe7c" />
 
 6. Now go the clients section and click on Create Client
+
    <img width="1106" alt="image" src="https://github.com/user-attachments/assets/8ac8b660-8008-490c-a63c-93b3f98c7732" />
 
 7. Select application type as desktop application and give it any name. Then press Create.
+
    <img width="1008" alt="Screenshot 2025-04-13 at 5 12 34 PM" src="https://github.com/user-attachments/assets/3bc10864-dd19-4f66-8ddc-a19e8f2d4580" />
 
 8. Click on Download JSON and download the credentials file
+
    <img width="264" alt="image" src="https://github.com/user-attachments/assets/9a7e9255-577b-4e19-9355-147d81e0face" />
 
 9. Go to the project's root directory and paste the file. Rename it to `credentials.json`. This is an essential step for our backend code to recognize the client
 
 10. Go to the Audience section and click on Publish App
+
    <img width="1323" alt="Screenshot 2025-04-13 at 5 15 15 PM" src="https://github.com/user-attachments/assets/56820724-d250-469a-8645-0a773a9c8b10" />
 
 11. Now at the top search bar on the Google cloud dashboard, search for calendar and click on Google Calendar API
+
     <img width="829" alt="image" src="https://github.com/user-attachments/assets/31db53b9-b979-4311-b21a-dcae7d5d46e8" />
 
 12. Click on Enable
+
     <img width="750" alt="Screenshot 2025-04-13 at 5 17 59 PM" src="https://github.com/user-attachments/assets/480493ec-491e-4327-880e-5c6fd681c666" />
 
 13. Similarly, search for Google Gmail API and enable it
+
     <img width="750" alt="Screenshot 2025-04-13 at 5 17 59 PM" src="https://github.com/user-attachments/assets/2e0603f1-e41c-4ad4-a027-b2d38f4b1244" />
 
 We are all set!
