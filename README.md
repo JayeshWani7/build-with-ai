@@ -133,6 +133,12 @@ Run the main application:
 python main.py
 ```
 
+In case you are running the app in a terminal session different from the one in which you activated virtual environment, run the app using:
+
+```bash
+source venv/bin/activate && clear && python main.py
+```
+
 The assistant will:
 
 1. Check for new emails every minute
