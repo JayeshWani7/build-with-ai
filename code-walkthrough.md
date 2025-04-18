@@ -113,7 +113,7 @@ When `main.py` is executed, the application initializes an automated email and c
 ┌───────▼───────┐      ┌───────────────────────────────────────────────┐
 │               │      │                                               │
 │  Scheduler    │      │           email_assistant_with_scheduling     │
-│  (10-min)     │      │           (Gemini Pro AI Agent)              │
+│  (10-min)     │      │           (Gemini Pro AI Agent)               │
 │               │      │                                               │
 └───────────────┘      └───────────────┬───────────────┬───────────────┘
                                        │               │
