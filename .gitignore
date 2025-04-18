@@ -6,9 +6,14 @@ dist/
 wheels/
 *.egg-info
 
+# Credentials
+.env
+credentials.json
+
 # Virtual environments
 .venv
 venv
 *.json
 .env
 *.pickle
+venv/**
