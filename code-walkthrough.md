@@ -109,8 +109,8 @@ When `main.py` is executed, the application initializes an automated email and c
 │               │      │               │      │                       │
 └───────┬───────┘      └───────────────┘      └───────────┬───────────┘
         │                                                 │
-        │                                                 ▼
-┌───────▼───────┐      ┌───────────────────────────────────────────────┐
+        │                                                 │ 
+┌───────▼───────┐      ┌──────────────────────────────────▼────────────┐
 │               │      │                                               │
 │  Scheduler    │      │           email_assistant_with_scheduling     │
 │  (10-min)     │      │           (Gemini Pro AI Agent)               │
@@ -132,7 +132,7 @@ When `main.py` is executed, the application initializes an automated email and c
     - App receives and stores OAuth tokens
     - Subsequent runs: Tokens refreshed automatically when needed
 
-## Potential Workshop Issues
+## Frequently Asked Questions
 
 You may encounter these common challenges:
 

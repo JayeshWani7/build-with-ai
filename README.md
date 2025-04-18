@@ -170,6 +170,10 @@ Here are some examples of the Email Assistant in action:
 
 ![Inbox Email Example 1](examples/inbox-mail-1.jpeg)
 
+### Calendar Event Created 1
+
+![Calendar Event Created 1](examples/calendar-event-created-1.jpeg)
+
 ### Response Draft 1
 
 ![Response Draft Example 1](examples/response-draft-1.jpeg)
