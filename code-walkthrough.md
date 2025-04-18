@@ -102,26 +102,17 @@ When `main.py` is executed, the application initializes an automated email and c
 
 ## Data Flow Diagram
 
-```ascii
-┌───────────────┐      ┌───────────────┐      ┌───────────────────────┐
-│               │      │               │      │                       │
-│    main.py    │──────▶  Gmail API    │──────▶  list_recent_emails() │
-│               │      │               │      │                       │
-└───────┬───────┘      └───────────────┘      └───────────┬───────────┘
-        │                                                 │
-        │                                                 │ 
-┌───────▼───────┐      ┌──────────────────────────────────▼────────────┐
-│               │      │                                               │
-│  Scheduler    │      │           email_assistant_with_scheduling     │
-│  (10-min)     │      │           (Gemini Pro AI Agent)               │
-│               │      │                                               │
-└───────────────┘      └───────────────┬───────────────┬───────────────┘
-                                       │               │
-                       ┌───────────────▼┐    ┌─────────▼───────────┐
-                       │                │    │                     │
-                       │  create_draft  │    │  Calendar Operations│
-                       │                │    │                     │
-                       └────────────────┘    └─────────────────────┘
+```mermaid
+%%{init: {"theme": "dark", "themeVariables": { "primaryColor": "#1e90ff", "edgeLabelBackground":"#222", "tertiaryColor": "#2e2e2e" }}}%%
+graph TD
+    A[main.py] --> B[Gmail API]
+    B --> C[list_recent_emails]
+    
+    A --> D[Scheduler - runs every 10 min]
+    C --> E[email_assistant_with_<br>scheduling<br><i>Gemini Pro AI Agent</i>]
+
+    E --> F[create_draft]
+    E --> G[Calendar Operations]
 ```
 
 ## Authentication and Security Flow
