@@ -54,7 +54,7 @@ A smart email and calendar management system powered by Gemini Pro that automati
 
    <img width="514" alt="Screenshot 2025-04-13 at 5 20 47 PM" src="https://github.com/user-attachments/assets/a06b9d61-0ef1-407c-b80f-f91fd52aa6f6" />
 
-   In case you do not have any existing Google Cloud Projects that appear in the dropdown, create a new Google Cloud Project at [https://console.cloud.google.com/projectcreate](https://console.cloud.google.com/projectcreate) with the name of your choice and then go back to create API key under this newly created project
+   In case you do not have any existing Google Cloud Projects that appear in the dropdown, create a new Google Cloud Project at [https://console.cloud.google.com/projectcreate](https://console.cloud.google.com/projectcreate) with the name of your choice and then resume creating a new API key under this newly created project
 
 4. Copy the generated API Key
 
