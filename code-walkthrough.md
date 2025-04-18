@@ -147,7 +147,3 @@ You may encounter these common challenges:
 5. **Dependencies**:
    - Installing all required packages
    - Handling potential version conflicts
-
-6. **Testing Limitations**:
-   - Need for real Gmail/Calendar accounts to test functionality
-   - Lack of mock data or testing environment
