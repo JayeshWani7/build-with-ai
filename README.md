@@ -12,7 +12,7 @@ A smart email and calendar management system powered by Gemini Pro that automati
 
 ## Project Structure
 
-```
+```text
 ├── main.py              # Main application entry point
 ├── agents.py            # AI agents configuration and prompts
 ├── models.py            # AI model configurations
@@ -32,37 +32,49 @@ A smart email and calendar management system powered by Gemini Pro that automati
 
 1. Clone the repository
 2. Install dependencies:
+
    ```bash
    # setup a virtual environment
    python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
+
 3. Generate the API Key and save under `.env`
 4. Set up Google OAuth 2.0 credentials and save them appropriately
 
 ## Generating & Adding the API Key in the project
 
-1. Go to [https://aistudio.google.com/u/2/apikey](https://aistudio.google.com/u/2/apikey)
+1. Go to [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+
 2. Click on create API Key
+
    <img width="1739" alt="image" src="https://github.com/user-attachments/assets/a4a194e7-65c8-4593-8a68-5e0bf8dd6b66" />
-   
+
 3. Select the project from the dropdown
 
    <img width="514" alt="Screenshot 2025-04-13 at 5 20 47 PM" src="https://github.com/user-attachments/assets/a06b9d61-0ef1-407c-b80f-f91fd52aa6f6" />
 
+   In case you do not have any existing Google Cloud Projects that appear in the dropdown, create a new Google Cloud Project at [https://console.cloud.google.com/projectcreate](https://console.cloud.google.com/projectcreate) with the name of your choice and then resume creating a new API key under this newly created project
+
 4. Copy the generated API Key
+
 5. Open the project in any IDE of your choice (For eg. `VSCode`)
+
 6. Rename the file `.env.example` to `.env`
+
 7. Paste the API Key as
+
    ```bash
    GOOGLE_API_KEY=AIzaXXXXXXXXXXXXXXXXXXXXXX
    ```
+
 8. Restart the IDE so that it recognizes the API key
 
 ## Setting up OAuth 2.0 Credentials
 
 1. Go to [https://console.cloud.google.com/auth/overview](https://console.cloud.google.com/auth/overview). Click on `Get Started`
+
    <img width="1792" alt="Screenshot 2025-04-13 at 5 10 25 PM" src="https://github.com/user-attachments/assets/0e513e06-31b9-4e1c-8025-858e0b6a2dac" />
 
 2. Under App Information, give any name to your app and select your email id from the drop down under user support email and click next
@@ -70,10 +82,11 @@ A smart email and calendar management system powered by Gemini Pro that automati
    <img width="628" alt="Screenshot 2025-04-13 at 5 11 08 PM" src="https://github.com/user-attachments/assets/36698341-178a-450e-b4cd-ace43b42aedc" />
 
 3. Under Audience, select external and click next
-   
+
    <img width="728" alt="Screenshot 2025-04-13 at 5 11 20 PM" src="https://github.com/user-attachments/assets/5f41c84e-3118-4cd4-a2e2-02a71ae9557e" />
 
 4. Put any email id under contact information and click next
+
    <img width="694" alt="Screenshot 2025-04-13 at 5 11 28 PM" src="https://github.com/user-attachments/assets/d97c60e5-90b7-4e46-90a6-90fa7ade189d" />
 
 5. Accept the terms and conditions and click continue
@@ -115,11 +128,19 @@ We are all set!
 ## Usage
 
 Run the main application:
+
 ```bash
 python main.py
 ```
 
+In case you are running the app in a terminal session different from the one in which you activated virtual environment, run the app using:
+
+```bash
+source venv/bin/activate && clear && python main.py
+```
+
 The assistant will:
+
 1. Check for new emails every minute
 2. Process emails using AI to understand context and requirements
 3. Generate appropriate responses and create drafts
@@ -128,6 +149,7 @@ The assistant will:
 ## Dependencies
 
 Key dependencies include:
+
 - google-api-python-client: Google API client library
 - langgraph: For creating reactive AI agents
 - schedule: For periodic task scheduling
@@ -135,9 +157,34 @@ Key dependencies include:
 ## Configuration
 
 Ensure proper setup of:
+
 1. Google OAuth 2.0 credentials
 2. Gmail API access
 3. Google Calendar API access
+
+## Examples
+
+Here are some examples of the Email Assistant in action:
+
+### Inbox Email 1
+
+![Inbox Email Example 1](examples/inbox-mail-1.jpeg)
+
+### Calendar Event Created 1
+
+![Calendar Event Created 1](examples/calendar-event-created-1.jpeg)
+
+### Response Draft 1
+
+![Response Draft Example 1](examples/response-draft-1.jpeg)
+
+### Inbox Email 2
+
+![Inbox Email Example 2](examples/inbox-mail-2.jpeg)
+
+### Response Draft 2
+
+![Response Draft Example 2](examples/response-draft-2.jpeg)
 
 ## License
 
