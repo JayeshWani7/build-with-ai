@@ -31,6 +31,12 @@ A smart email and calendar management system powered by Gemini Pro that automati
 ## Installation
 
 1. Clone the repository
+
+   ```bash
+   git clone https://github.com/vishal-android-freak/build-with-ai.git
+   cd build-with-ai
+   ```
+
 2. Install dependencies:
 
    ```bash
